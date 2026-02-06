@@ -1,5 +1,20 @@
-function spawnRoses() {
-  for (let i = 0; i < 50; i++) {
+function checkAnswer() {
+  const input = document.getElementById("answer").value.trim().toLowerCase();
+
+  if (input === "sajan") {
+    document.getElementById("container").style.display = "none";
+
+    showRoses();
+
+    const msg = document.getElementById("message");
+    msg.style.display = "block";
+  } else {
+    alert("Try again 🙂");
+  }
+}
+
+function showRoses() {
+  for (let i = 0; i < 80; i++) {
     const rose = document.createElement("div");
     rose.className = "rose";
     rose.innerText = "🌹";
