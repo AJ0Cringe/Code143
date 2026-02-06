@@ -1,17 +1,26 @@
 function checkAnswer() {
   const input = document.getElementById("answer").value.trim().toLowerCase();
+  const msg = document.getElementById("message");
 
-  // Allow multiple names
-  if (input === "sajan" || input === "amitha") {
-    document.getElementById("container").style.display = "none";
-
-    showRoses();
-
-    const msg = document.getElementById("message");
-    msg.classList.add("show");
-  } else {
+  if (input === "sajan") {
+    triggerSurprise("For you 🌹");
+  } 
+  else if (input === "amitha") {
+    triggerSurprise("For my dearest sister ..Pothan Vava 🌹");
+  } 
+  else {
     alert("Try again 🙂");
   }
+}
+
+function triggerSurprise(text) {
+  document.getElementById("container").style.display = "none";
+
+  showRoses();
+
+  const msg = document.getElementById("message");
+  msg.textContent = text;
+  msg.classList.add("show");
 }
 
 function showRoses() {
