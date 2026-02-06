@@ -2,12 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Rose Surprise</title>
+  <title>For You 🌹</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<button onclick="spawnRoses()">Click me 🌹</button>
+<div id="container">
+  <h1>How do you spell cute?</h1>
+
+  <input type="text" id="answer" placeholder="Type here..." />
+
+  <button onclick="checkAnswer()">Submit</button>
+</div>
+
+<div id="message">For you 🌹</div>
 
 <script src="script.js"></script>
 </body>
