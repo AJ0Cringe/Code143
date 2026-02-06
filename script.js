@@ -7,7 +7,7 @@ function checkAnswer() {
     showRoses();
 
     const msg = document.getElementById("message");
-    msg.style.display = "block";
+    msg.classList.add("show");
   } else {
     alert("Try again 🙂");
   }
