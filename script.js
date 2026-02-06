@@ -1,7 +1,8 @@
 function checkAnswer() {
   const input = document.getElementById("answer").value.trim().toLowerCase();
 
-  if (input === "sajan") {
+  // Allow multiple names
+  if (input === "sajan" || input === "amitha") {
     document.getElementById("container").style.display = "none";
 
     showRoses();
