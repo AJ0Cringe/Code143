@@ -43,12 +43,14 @@ button {
 }
 
 #message {
-  position: absolute;
+  position: fixed;
   font-size: 60px;
   opacity: 0;
   transform: scale(0.2);
+}
+
+.show {
   animation: zoom 2s forwards;
-  display: none;
 }
 
 @keyframes zoom {
