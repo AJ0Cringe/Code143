@@ -1,11 +1,28 @@
 body {
-  height: 100vh;
   margin: 0;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  text-align: center;
+  z-index: 10;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .rose {
@@ -22,5 +39,21 @@ body {
   to {
     top: 100vh;
     opacity: 0;
+  }
+}
+
+#message {
+  position: absolute;
+  font-size: 60px;
+  opacity: 0;
+  transform: scale(0.2);
+  animation: zoom 2s forwards;
+  display: none;
+}
+
+@keyframes zoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
